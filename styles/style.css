@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: #fff;
+    background-color: #00053f;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+}
+
+button:not(:last-child) {
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #2b3066;
+}
+
+button:active {
+    background-color: #000a78;
+}
+
+.btn--cancel {
+    background-color: #ff0149;
+}
+
+.btn--cancel:hover {
+    background-color: #ff3b73;
+}
+
+.btn--cancel:active {
+    background-color: #d2003c;
+}
+
+.btn--edit {
+    background-color: #009577;
+}
+
+.btn--edit:hover {
+    background-color: #45b39d;
+}
+
+.btn--edit:active {
+    background-color: #008a6e;
+}
+
+.btn--menu {
+    width: 30%;
+    padding: 12px;
+}
+
+.btn--menu:active {
+    background-color: #000a78;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(150deg, #00053f, #009577)
+}
+
+.list_wrapper {
+    margin: 0 auto;
+    width: 60%;
+    min-height: 85vh;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.list_wrapper input {
+    padding: 7px 9px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    background-color: #eaf1f0;
+    flex-grow: 1;
+    margin-right: 3px;
+}
+
+.list_title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.list_menu {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+.task_list {
+    list-style: none;
+}
+
+.list_buttons {
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.list_item {
+    align-items: center;
+    display: flex;
+    padding: 10px;
+
+}
+
+.list_item:not(:last-child) {
+  
+    border-bottom: 1px solid #ccdfdc;
+}
+
+.list_item span {
+    flex-grow: 1;
+}
