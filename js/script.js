@@ -138,34 +138,35 @@ showAllBtn.addEventListener('click', () => {
 
 
 showCompletedBtn.addEventListener('click', () => {
-    taskList.innerHTML = '';
-    tasks.filter(task => task.completed).forEach(task => {
-        const li = document.createElement('li');
-        li.classList.add('list_item')
-        li.innerHTML = ` 
-      <span>${task.text}</span> 
-      <button onclick="editTask(event)">Edit</button> 
-      <button class="btn--edit" onclick="markAsComplete(this)">Done</button> 
-      <button class="btn--cancel" onclick="deleteTask(this)">Delete</button> `;
-
-        const span = li.querySelector('span');
-        span.classList.add('completed');
-        taskList.appendChild(li);
+ 
+    const tasks = taskList.querySelectorAll('li');
+    
+        tasks.forEach(task => {
+    
+    const span = task.querySelector('span')
+    
+            if (span.className !== 'completed') {
+               task.className = 'hidden';
+            } else {
+                task.className = 'list_item';
+            }
+          });
+        
+        });
+    
+    
+    
+    showIncompleteBtn.addEventListener('click', () => {
+        const tasks = taskList.querySelectorAll('li');
+    
+        tasks.forEach(task => {
+    
+    const span = task.querySelector('span')
+    
+            if (span.className === 'completed') {
+               task.className = 'hidden';
+            } else {
+                task.className = 'list_item';
+            }
+          });
     });
-});
-
-showIncompleteBtn.addEventListener('click', () => {
-    taskList.innerHTML = '';
-    tasks.filter(task => !task.completed).forEach(task => {
-        const li = document.createElement('li');
-        li.classList.add('list_item')
-        li.innerHTML = ` 
-      <span>${task.text}</span> 
-      <button onclick="editTask(event)">Edit</button> 
-      <button class="btn--edit" onclick="markAsComplete(this)">Done</button> 
-      <button class="btn--cancel" onclick="deleteTask(this)">Delete</button> `;
-
-        taskList.appendChild(li);
-    });
-});
-

@@ -97,6 +97,10 @@ button:active {
     text-decoration: line-through;
 }
 
+.hidden {
+    display: none;
+}
+
 .list_menu {
     display: flex;
     margin-bottom: 10px;
@@ -126,4 +130,5 @@ button:active {
 
 .list_item span {
     flex-grow: 1;
+    cursor: pointer;
 }
