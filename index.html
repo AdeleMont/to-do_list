@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="list_wrapper">
+            <h1 class="list_title">ToDo</h1>
+            <div class="list_menu">
+                <input type="text" id="taskInput" placeholder="Add New Task">
+                <button id="addTask">Add Task</button>
+            </div>
+
+            <div class="list_menu">
+                <input type="text" id="filterInput" placeholder="Search...">
+                <button id="filterBtn">Search</button>
+                <button id="cancelBtn" class="btn--cancel">Cancel</button>
+            </div>
+
+            <div class="list_buttons list_menu">
+                <button class="btn--menu" id="showAll">Show all</button>
+                <button class="btn--menu" id="showCompleted">Show Completed</button>
+                <button class="btn--menu" id="showIncomplete">Show Incomplited</button>
+            </div>
+            <div>
+                <ul class="task_list" id="taskList"></ul>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
